@@ -1,8 +1,15 @@
 body{
     font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    background-image: url('Images\\placeholder.jpg')
-
+    background-image: url('Images\\placeholder.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
 }
+
+.grid-container {
+    display: grid;
+    column-gap: 10px;
+}
+
 
 /* Main title at top of page */
 #title-text {
@@ -22,7 +29,7 @@ body{
     height: 500px;
     border: 10px solid rgb(220, 233, 245);
     border-radius: 10px;
-    margin:5%;
+    margin:3%;
     padding:15px;
     background-color: rgb(248, 248, 248);
 }
@@ -53,13 +60,41 @@ h3{
 }
 
 #menu-box {
+    width: 1000px;
     margin-top: 35px;
-}
+    margin-right: 5px;
+    grid-column-start: 1;
+    grid-column-end: 2;
 
+}
 
 
 /* Contact Box */
 #contact-box {
-    width: 300px;
+    margin-top: 35px;
+    width: 500px;
     height: 200px;
+    grid-column-start: 2;
+    grid-column-end: 2;
+
+}
+
+
+/* Play Area */
+.main-button-style {
+    width: 100px;
+    height: 100px;
+    margin: 11px;
+    vertical-align: top;
+    border-radius: 20px;
+}
+
+
+#play-area-box {
+    height: 500px;
+    width: 1300px;
+    grid-row: 2;
+    grid-column-start: 1;
+    grid-column-end: 3;
+    margin: 20px;
 }
