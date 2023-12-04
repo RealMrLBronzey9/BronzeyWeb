@@ -1,6 +1,6 @@
 body{
     font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    background-image: url('Images\\placeholder.jpg');
+    background-image: url('Images/backgrounds/BronzeyMain.jpg');
     background-size: cover;
     background-repeat: no-repeat;
 }
@@ -9,7 +9,6 @@ body{
     display: grid;
     column-gap: 10px;
 }
-
 
 /* Main title at top of page */
 #title-text {
@@ -84,14 +83,14 @@ h3{
 .main-button-style {
     width: 100px;
     height: 100px;
-    margin: 11px;
+    margin: 13px;
     vertical-align: top;
     border-radius: 20px;
 }
 
 
 #play-area-box {
-    height: 500px;
+    height: 200px;
     width: 1300px;
     grid-row: 2;
     grid-column-start: 1;
