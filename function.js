@@ -23,9 +23,33 @@ function buttonChangeBackground(){
     let backgrounds = [
         "Images/backgrounds/BronzeyMain.jpg", 
         "Images/backgrounds/Philippines.png",
-        "Images/backgrounds/WebsiteOld.png"
+        "Images/backgrounds/WebsiteOld.png",
+        "Images/backgrounds/enveedea.png",
+        "Images/backgrounds/Vbuvksbot.png",
+        "Images/backgrounds/Windows10.png"
     ];
-    let index = Math.floor(Math.random() * 3);
+    let index = Math.floor(Math.random() * backgrounds.length);
     document.body.style.background = `url(${backgrounds[index]})`;
+    document.body.style.backgroundRepeat = "no-repeat";
+    document.body.style.backgroundSize = "cover";
 
+
+
+}
+
+function buttonPlaySound(){
+    let sounds = [
+        "sounds/bruh.mp3",
+        "sounds/metalpipe.mp3",
+        "sounds/congratyouwon.mp3",
+        "sounds/therooook.mp3",
+        "sounds/vineboom.mp3",
+        "sounds/therooook.mp3",
+        "sounds/waterphone.mp3",
+        "sounds/uacwin10.mp3",
+        "sounds/xpshutdown.mp3"
+ ]  
+    let index = Math.floor(Math.random() * sounds.length);
+    let sound = new Audio(sounds[index]);
+    sound.play();
 }
