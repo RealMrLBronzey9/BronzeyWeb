@@ -26,7 +26,9 @@ function buttonChangeBackground(){
         "Images/backgrounds/WebsiteOld.png",
         "Images/backgrounds/enveedea.png",
         "Images/backgrounds/Vbuvksbot.png",
-        "Images/backgrounds/Windows10.png"
+        "Images/backgrounds/Windows10.png",
+        "Images/backgrounds/furinacrop.png"
+
     ];
     let index = Math.floor(Math.random() * backgrounds.length);
     document.body.style.background = `url(${backgrounds[index]})`;
@@ -53,3 +55,52 @@ function buttonPlaySound(){
     let sound = new Audio(sounds[index]);
     sound.play();
 }
+
+let hi = 0; // hi button var
+function buttonHi(){
+    let button = document.getElementById("hi-button");
+    hi++;
+    switch (hi){
+        case 1:
+            button.style.backgroundColor = "rgb(195,255,105)";
+            button.innerHTML = "Oww 🥺";
+            break;
+
+        case 2:
+            button.style.backgroundColor = "rgb(231,255,71)";
+            button.innerHTML = "Noo! 😢";
+            break;
+
+        case 3:
+            button.style.backgroundColor = "rgb(255,195,56)";
+            button.innerHTML = "Stop!! 😟";
+            break;
+
+        case 4:
+            button.style.backgroundColor = "rgb(255,119,51)";
+            button.innerHTML = "STOP NOW! 😠";
+            button.style.fontSize = "25px";
+            break;
+        
+        case 5:
+            button.style.backgroundColor = "rgb(255,91,66))";
+            button.innerHTML = "1 More Time!! 😡";
+            button.style.fontSize = "20px";
+            break;
+       
+        default:
+            button.style.backgroundColor = "rgb(47, 175, 47)";
+            button.innerHTML = "Hi! 😀";
+            button.style.fontSize = "30px";
+            hi = 0;
+            window.open("https://youtu.be/ACFuf4qrhDY?si=laI2yZSrYzxdj0Hi");
+            break;
+        }
+}
+
+
+
+// ----- Run After Load -----
+document.addEventListener("DOMContentLoaded", function(event){
+    buttonChangeBackground();
+})
