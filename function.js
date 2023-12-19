@@ -27,7 +27,8 @@ function buttonChangeBackground(){
         "Images/backgrounds/enveedea.png",
         "Images/backgrounds/Vbuvksbot.png",
         "Images/backgrounds/Windows10.png",
-        "Images/backgrounds/furinacrop.png"
+        "Images/backgrounds/furinacrop.png",
+        "Images/backgrounds/nebula.jpg"
 
     ];
     let index = Math.floor(Math.random() * backgrounds.length);
@@ -41,15 +42,14 @@ function buttonChangeBackground(){
 
 function buttonPlaySound(){
     let sounds = [
-        "sounds/bruh.mp3",
-        "sounds/metalpipe.mp3",
-        "sounds/congratyouwon.mp3",
-        "sounds/therooook.mp3",
-        "sounds/vineboom.mp3",
-        "sounds/therooook.mp3",
-        "sounds/waterphone.mp3",
-        "sounds/uacwin10.mp3",
-        "sounds/xpshutdown.mp3"
+        "sounds/effects/bruh.mp3",
+        "sounds/effects/metalpipe.mp3",
+        "sounds/effects/congratyouwon.mp3",
+        "sounds/effects/therooook.mp3",
+        "sounds/effects/vineboom.mp3",
+        "sounds/effects/waterphone.mp3",
+        "sounds/effects/uacwin10.mp3",
+        "sounds/effects/xpshutdown.mp3"
  ]  
     let index = Math.floor(Math.random() * sounds.length);
     let sound = new Audio(sounds[index]);
@@ -98,7 +98,24 @@ function buttonHi(){
         }
 }
 
+let audio = null; // Declare audio variable outside the function
 
+function buttonBackSound() {
+    let music = [
+        'sounds/background/piano.wav',
+        'sounds/background/string.wav',
+        'sounds/background/synth.wav'
+    ]
+    if (audio) {
+        audio.pause(); // Pause the currently playing audio
+    }
+    audio = new Audio(music[Math.floor(Math.random() * music.length)]);
+    audio.loop = true;
+    audio.play();
+
+    let button = document.getElementById("background-sound-button");
+    button.innerHTML = "My Chrome Music Lab Masterpiece";
+}
 
 // ----- Run After Load -----
 document.addEventListener("DOMContentLoaded", function(event){
