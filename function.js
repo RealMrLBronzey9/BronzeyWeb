@@ -10,13 +10,20 @@
 // Button Functions
 
 function buttonDontClickMe(){
+    
     let messages = ["Stop", "What are you doing??", "I said STOP!!", "NO MORE!", "If you continue this I will have to..", "Do you not understand??", "I AM WARNING YOU TO STOP!!", "Last Warning!!", "3", "2", "1", "Please I am begging you!", "Fine..", "If you continue after this..", "I have no choice now", "Sorry but.."];
         
     for (let i = 0; i < messages.length; i++){
         alert(messages[i]);
     }
-    window.open("https://youtu.be/dQw4w9WgXcQ?si=bb9Y2g4ht0VFlbcP");
-    alert("stupid pop up blocked bruh...");
+    let rickRollWindow = window.open("https://youtu.be/dQw4w9WgXcQ?si=bb9Y2g4ht0VFlbcP");
+    
+    // Check if rick roll window did not get popup blocked
+    if(!rickRollWindow || rickRollWindow.closed || typeof rickRollWindow.closed=='undefined'){
+        // pop up blocked
+        alert("stupid pop up blocked bruh...");
+    }
+    
 }
 
 function buttonChangeBackground(){
@@ -28,7 +35,8 @@ function buttonChangeBackground(){
         "Images/backgrounds/Vbuvksbot.png",
         "Images/backgrounds/Windows10.png",
         "Images/backgrounds/furinacrop.png",
-        "Images/backgrounds/nebula.jpg"
+        "Images/backgrounds/nebula.jpg",
+        "Images/backgrounds/taiwangpt.png"
 
     ];
     let index = Math.floor(Math.random() * backgrounds.length);
@@ -96,25 +104,6 @@ function buttonHi(){
             window.open("https://youtu.be/ACFuf4qrhDY?si=laI2yZSrYzxdj0Hi");
             break;
         }
-}
-
-let audio = null; // Declare audio variable outside the function
-
-function buttonBackSound() {
-    let music = [
-        'sounds/background/piano.wav',
-        'sounds/background/string.wav',
-        'sounds/background/synth.wav'
-    ]
-    if (audio) {
-        audio.pause(); // Pause the currently playing audio
-    }
-    audio = new Audio(music[Math.floor(Math.random() * music.length)]);
-    audio.loop = true;
-    audio.play();
-
-    let button = document.getElementById("background-sound-button");
-    button.innerHTML = "My Chrome Music Lab Masterpiece";
 }
 
 // ----- Run After Load -----
