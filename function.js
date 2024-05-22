@@ -43,9 +43,6 @@ function buttonChangeBackground(){
     document.body.style.background = `url(${backgrounds[index]})`;
     document.body.style.backgroundRepeat = "no-repeat";
     document.body.style.backgroundSize = "cover";
-
-
-
 }
 
 function buttonPlaySound(){
