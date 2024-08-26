@@ -34,16 +34,23 @@ function buttonChangeBackground(){
         "Images/backgrounds/enveedea.png",
         "Images/backgrounds/Vbuvksbot.png",
         "Images/backgrounds/Windows10.png",
-        "Images/backgrounds/furinacrop.png",
         "Images/backgrounds/nebula.jpg",
-        "Images/backgrounds/taiwangpt.png"
+        "Images/backgrounds/taiwangpt.png",
+        "Images/backgrounds/firemarisafanart.png"
 
     ];
     let index = Math.floor(Math.random() * backgrounds.length);
     document.body.style.background = `url(${backgrounds[index]})`;
     document.body.style.backgroundRepeat = "no-repeat";
     document.body.style.backgroundSize = "cover";
+
+    // Check if the index is my Marisa fanart and play master spark
+    if (index == 8){
+        let sound = new Audio("sounds/effects/masterspark.mp3")
+        sound.play();
+    } 
 }
+
 
 function buttonPlaySound(){
     let sounds = [
@@ -98,7 +105,7 @@ function buttonHi(){
             button.innerHTML = "Hi! 😀";
             button.style.fontSize = "30px";
             hi = 0;
-            window.open("https://youtu.be/ACFuf4qrhDY?si=laI2yZSrYzxdj0Hi");
+            window.open("https://youtu.be/jxRXtovNO_I?si=61O-q4WKgOGgGZsr");
             break;
         }
 }
